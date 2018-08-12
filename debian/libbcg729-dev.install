@@ -1,4 +1,2 @@
-usr/include/*
-usr/lib/*/lib*.a
-usr/lib/*/lib*.so
-usr/lib/*/pkgconfig/*
+usr/include/
+usr/lib/x86_64-linux-gnu/libbcg729.a
