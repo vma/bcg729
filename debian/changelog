@@ -1,0 +1,5 @@
+bcg729 (1.0.4-20180812+deb9) stretch; urgency=medium
+
+  * Initial packaging for stretch.
+
+ -- Vallimamod Abdullah <vma@sip.solutions>  Sun, 12 Aug 2018 17:29:55 +0000
