@@ -1,3 +1,10 @@
+bcg729 (1.0.4-20180815) experimental; urgency=medium
+
+  * Debian rules file converted to cmake.
+  * Added pc file to install.
+
+ -- Vallimamod Abdullah <vma@sip.solutions>  Wed, 15 Aug 2018 18:45:35 +0000
+
 bcg729 (1.0.4-20180812+deb9) stretch; urgency=medium
 
   * Initial packaging for stretch.

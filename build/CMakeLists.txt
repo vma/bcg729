@@ -42,7 +42,7 @@ message("-- Package file name is ${CPACK_PACKAGE_FILE_NAME}" )
 
 set(CPACK_SOURCE_PACKAGE_FILE_NAME ${CPACK_PACKAGE_FILE_NAME})
 
-configure_file("rpm/bcg729.spec.cmake" "${PROJECT_SOURCE_DIR}/bcg729.spec" @ONLY)
+#configure_file("rpm/bcg729.spec.cmake" "${PROJECT_SOURCE_DIR}/bcg729.spec" @ONLY)
 
 include(CPack)
 

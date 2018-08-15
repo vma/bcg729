@@ -10,17 +10,10 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=-all,+format,+fortify,+stackprotector
 
 %:
 	dh $@ --parallel \
-		--with autotools-dev --with autoreconf \
-		--buildsystem=autoconf
-
-override_dh_auto_clean:
-	dh_auto_clean
-
-override_dh_autoreconf:
-	dh_autoreconf -- ./autogen.sh
+		--buildsystem=cmake
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DENABLE_SHARED=YES -DENABLE_STATIC=YES -DENABLE_TESTS=NO
+	dh_auto_configure -- -DENABLE_SHARED=YES -DENABLE_STATIC=YES -DENABLE_TESTS=NO -DCMAKE_SKIP_INSTALL_RPATH=ON
 
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/tmp
