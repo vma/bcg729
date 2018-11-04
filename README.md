@@ -1,12 +1,27 @@
-[![pipeline status](https://gitlab.linphone.org/BC/public/bcg729/badges/master/pipeline.svg)](https://gitlab.linphone.org/BC/public/bcg729/commits/master)
-
 Bcg729
 ======
+
+This package is forked from [BelledonneCommunications/bcg729][bcg729-repo]
+with CMake based debian packaging for `stretch`.
+
+To build the debian package, just run
+
+```bash
+fakeroot dh binary
+```
+
+It will produce 3 packagess
+
+- `libbcg729-0_1.0.4-*_amd64.deb`: runtime shared lib
+- `libbcg729-0-dbgsym_1.0.4-*_amd64.deb`: corresponding runtime debug symbols
+- `libbcg729-dev_1.0.4-*_amd64.deb`: dev header files and static lib
+
+------
 
 About bcg729
 ------------
 
-Bcg729 is an opensource implementation of both encoder and decoder of the ITU G729 Annex A/B speech codec. 
+Bcg729 is an opensource implementation of both encoder and decoder of the ITU G729 Annex A/B speech codec.
 
 The library written in C 99 is fully portable and can be executed on many platforms including both ARM and x86 processors. 
 libbcg729 supports concurrent channels encoding/decoding for multi call application such as conferencing. 
@@ -25,7 +40,7 @@ Compilation
 
 ### Dependencies
 
-No dependency is requested.
+No runtime dependency required (beside libc).
 
 
 ### Build procedure
@@ -33,7 +48,6 @@ No dependency is requested.
 Building by Autotools way is deprecated. Use [CMake][cmake-website] to configure the source code.
 
 	cmake . -DCMAKE_INSTALL_PREFIX=<prefix> -DCMAKE_PREFIX_PATH=<search_prefixes>
-	
 	make
 	make install
 
@@ -70,8 +84,6 @@ Tests suite
   You must first download the tests patterns using `make check` or manually
 
 
----------------------------------------
-
-
 [bcg729-patern]: http://www.belledonne-communications.com/downloads/bcg729-patterns.zip
 [cmake-website]: https://cmake.org/
+[bcg729-repo]: https://github.com/BelledonneCommunications/bcg729
