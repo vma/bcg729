@@ -30,3 +30,13 @@ test-driver
 config.sub
 config.h
 stamp-h1
+test
+*.cmake
+CMakeFiles
+*.so*
+CMakeCache.txt
+obj-x86_64-linux-gnu
+debian/*debhelper*
+debian/libbcg729*
+debian/tmp
+debian/files
